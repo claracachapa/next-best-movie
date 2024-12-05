@@ -37,13 +37,11 @@ Feature engineering was essential to improve model inputs. We used techniques su
 - Input Features: budget, runtime, release_year
 - Evaluation Metric: Mean Absolute Error (MAE)
 - Performance: Achieved MAE of $X.
-- Genre Classification:
-<br/>
+- Genre Classification: <br/>
 - **Model: RandomForestClassifier**
 - Input Features: budget, runtime, release_year
 - Evaluation Metric: Accuracy
-- Performance: Achieved accuracy of X%.
-<br/>
+- Performance: Achieved accuracy of X%. <br/>
 - **Validation Techniques**
 - Train-Test Split: 80/20 split for training and testing.
 - Cross-Validation: Employed k-fold cross-validation to ensure robust performance.
