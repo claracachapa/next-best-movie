@@ -31,19 +31,21 @@ Feature engineering was essential to improve model inputs. We used techniques su
 
 #### 3. Model Building and Evaluation
 
-**Revenue Prediction**:
+**Revenue Prediction**
 
 - **Model: RandomForestRegressor**
 - Input Features: budget, runtime, release_year
 - Evaluation Metric: Mean Absolute Error (MAE)
 - Performance: Achieved MAE of $X.
 - Genre Classification:
-
+` `
+` `
 - **Model: RandomForestClassifier**
 - Input Features: budget, runtime, release_year
 - Evaluation Metric: Accuracy
 - Performance: Achieved accuracy of X%.
-
+` `
+` `
 - **Validation Techniques**
 - Train-Test Split: 80/20 split for training and testing.
 - Cross-Validation: Employed k-fold cross-validation to ensure robust performance.
@@ -51,8 +53,8 @@ Feature engineering was essential to improve model inputs. We used techniques su
 #### 4. Hyperparameter Tuning and Model Optimization
 We optimized models using the following techniques:
 
-Random Search & Grid Search: Tuned hyperparameters like the number of estimators and tree depth.
-Feature Pruning: Reduced features to minimize noise and enhance interpretability.
+- **Random Search & Grid Search**: Tuned hyperparameters like the number of estimators and tree depth.
+- **Feature Pruning**: Reduced features to minimize noise and enhance interpretability.
 
 ### Key Findings & Implications
 - **Revenue Drivers**: High budgets and longer runtimes correlate with higher revenue but show diminishing returns beyond a threshold.
