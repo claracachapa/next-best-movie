@@ -1,77 +1,60 @@
-# Project overview
-...
+# The Next Best Movie 
 
-# Installation
+## Project Overview :)
+This project uses machine learning models to explore and predict insights from the top films of the last 20 years. Using the TMDb dataset, we analyse key factors that influence the success of films, focusing on revenue prediction and genre classification.
 
-1. **Clone the repository**:
+## Datasets :)
+We analyzed the [TMDb Movies Dataset](https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies), a comprehensive resource with over 1 million movies, updated daily. It includes information such as titles, ratings, release dates, revenue, genres, and more.
 
-```bash
-git clone https://github.com/YourUsername/repository_name.git
-```
+## Project Structure
+- **Data**: Contains raw and cleaned datasets in CSV format.  
+- **Notebooks**: Jupyter notebooks with model training and analysis code.  
+- **py-files**: Includes modularized scripts (`function.py`, `main.py`) for data cleaning and preprocessing.  
 
-2. **Install UV**
+## Analysis Approach
 
-If you're a MacOS/Linux user type:
+#### 1. Data Cleaning
+Data cleaning was critical due to the large dataset size (1 million+ records):
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+- **Dropped irrelevant columns** to streamline the dataset.  
+- **Filtered data**: Retained only movies released in the last 20 years, focusing on "Released" status.  
+- **Outlier handling**: Removed entries with unusual values for runtime, budget, and revenue.  
+- **Sorted by revenue** to prioritize high-performing movies.
 
-If you're a Windows user open an Anaconda Powershell Prompt and type :
+#### 2. Feature Engineering and Selection 
+Feature engineering was essential to improve model inputs. We used techniques such as:
 
-```bash
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
+- **Scaling**: Applied MinMaxScaler to normalize numeric variables.
+- **Date Features**: Split the release_date into release_month and release_day.
+- **Genres**: Normalized and tokenized genres for multi-label classification.
+- **Text Features**: Extracted key trends from movie titles for feature representation.
 
-3. **Create an environment**
+#### 3. Model Building and Evaluation
 
-```bash
-uv venv 
-```
+**Revenue Prediction**:
 
-3. **Activate the environment**
+- **Model: RandomForestRegressor**
+- Input Features: budget, runtime, release_year
+- Evaluation Metric: Mean Absolute Error (MAE)
+- Performance: Achieved MAE of $X.
+- Genre Classification:
 
-If you're a MacOS/Linux user type (if you're using a bash shell):
+- **Model: RandomForestClassifier**
+- Input Features: budget, runtime, release_year
+- Evaluation Metric: Accuracy
+- Performance: Achieved accuracy of X%.
 
-```bash
-source ./venv/bin/activate
-```
+- **Validation Techniques**
+- Train-Test Split: 80/20 split for training and testing.
+- Cross-Validation: Employed k-fold cross-validation to ensure robust performance.
 
-If you're a MacOS/Linux user type (if you're using a csh/tcsh shell):
+#### 4. Hyperparameter Tuning and Model Optimization
+We optimized models using the following techniques:
 
-```bash
-source ./venv/bin/activate.csh
-```
+Random Search & Grid Search: Tuned hyperparameters like the number of estimators and tree depth.
+Feature Pruning: Reduced features to minimize noise and enhance interpretability.
 
-If you're a Windows user type:
-
-```bash
-.\venv\Scripts\activate
-```
-
-4. **Install dependencies**:
-
-```bash
-uv pip install -r requirements.txt
-```
-
-# Questions 
-...
-
-# Dataset 
-...
-
-## Main dataset issues
-
-- ...
-- ...
-- ...
-
-## Solutions for the dataset issues
-...
-
-# Conclussions
-...
-
-# Next steps
-...
+## Key Findings & Implications
+- **Revenue Drivers**: High budgets and longer runtimes correlate with higher revenue but show diminishing returns beyond a threshold.
+- **Genre Trends**: Action, adventure, and family genres dominate top revenue earners.
+- **Title Impact**: Short, impactful titles with emotional or intriguing keywords perform better.
