@@ -1,17 +1,17 @@
-# The Next Best Movie 
+## The Next Best Movie 
 
-## Project Overview :)
+### Project Overview
 This project uses machine learning models to explore and predict insights from the top films of the last 20 years. Using the TMDb dataset, we analyse key factors that influence the success of films, focusing on revenue prediction and genre classification.
 
-## Datasets :)
+### Datasets
 We analyzed the [TMDb Movies Dataset](https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies), a comprehensive resource with over 1 million movies, updated daily. It includes information such as titles, ratings, release dates, revenue, genres, and more.
 
-## Project Structure
+### Project Structure
 - **Data**: Contains raw and cleaned datasets in CSV format.  
 - **Notebooks**: Jupyter notebooks with model training and analysis code.  
 - **py-files**: Includes modularized scripts (`function.py`, `main.py`) for data cleaning and preprocessing.  
 
-## Analysis Approach
+### Analysis Approach
 
 #### 1. Data Cleaning
 Data cleaning was critical due to the large dataset size (1 million+ records):
@@ -54,7 +54,7 @@ We optimized models using the following techniques:
 Random Search & Grid Search: Tuned hyperparameters like the number of estimators and tree depth.
 Feature Pruning: Reduced features to minimize noise and enhance interpretability.
 
-## Key Findings & Implications
+### Key Findings & Implications
 - **Revenue Drivers**: High budgets and longer runtimes correlate with higher revenue but show diminishing returns beyond a threshold.
 - **Genre Trends**: Action, adventure, and family genres dominate top revenue earners.
 - **Title Impact**: Short, impactful titles with emotional or intriguing keywords perform better.
