@@ -8,8 +8,7 @@ We analyzed the [TMDb Movies Dataset](https://www.kaggle.com/datasets/asaniczka/
 
 ## Project Structure
 - **Data**: Contains raw and cleaned datasets in CSV format.  
-- **Notebooks**: Jupyter notebooks with model training and analysis code.  
-- **py-files**: Includes modularized scripts (`function.py`, `main.py`) for data cleaning and preprocessing.
+- **Notebooks**: Jupyter notebooks with data cleaning, preprocessing, model training and analysis code.  
 - **Slides**: Presentation slides. 
 
 ## Analysis Approach
